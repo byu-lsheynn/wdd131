@@ -4,26 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WDD 131 - Dynamic Web Fundamentals - Lady Sheynn Vengco</title>
+    <link rel="stylesheet" href="styles/base.css">
     <meta name="description" content="WDD131: Dynamic Web Fundamentals Project - Lady Sheynn V. - Profile Project">
     <meta name="author" content="Lady Sheynn Vengco">
 </head>
 <body>
     <header>
-        <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+        <div class="course-title">
+            <span id="course-title">WDD 131 - Dynamic Web Fundamentals</span>
+        </div>
         <nav>
-            <a href="www.linkedin.com/in/lsvengco">LinkedIn</a>
-            <a href="https://byupw.instructure.com/.">Canvas</a>
-            <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng&id=p18#p18">Scripture</a>
-            <a href="">Final Project</a>
+            <a href="www.linkedin.com/in/lsvengco">LINKEDIN</a>
+            <a href="https://byupw.instructure.com/.">CANVAS</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures/nt/james/2?lang=eng&id=p18#p18">SCRIPTURE</a>
+            <a href="">FINAL PROJECT</a>
         </nav>
     </header>
     <main>
         <h1>Lady Sheynn Vengco</h1>
-        <section class="card">
-            <h4 class="heading">About Me</h4>
-            <div class="about-me">
+        <section class="card about-me">
+            <h4 class="heading">ABOUT ME</h4>
+            <div class="introduction">
                 <p class="content">
-                    Hi, I'm Lady Shane from the Philippines. I am currently pursuing a Certificate in Web and Computer Programming through
+                    Hi, I'm Lady Sheynn from the Philippines. I am currently pursuing a Certificate in Web and Computer Programming through
                     BYU-Pathway Worldwide and BYU-Idaho while working full-time as a Quality Assurance Specialist and ESL Instructor. My
                     passion for programming began in elementary school and has inspired me to continue developing my skills in web and
                     software development. I enjoy learning new technologies, solving problems, and building solutions that make a positive
@@ -34,18 +37,30 @@
             </div>
             <div class="country"> 
                 <h3>Cebu, Philippines</h3>
-                <img src="images/philippine-flag.jpg" alt="Philippine Flag" width="150">
+                <figure class="flag-container">
+                    <img src="images/philippine-flag.png" alt="Philippine Flag" width="150">
+                    <figcaption class="flag-label">Official flag of Philippine Flag</figcaption>
+                </figure>
                 <p class="content">
                     The Philippines is a vibrant archipelago in Southeast Asia known for its rich cultural heritage, breathtaking natural
-                    landscapes, and warm, hospitable people. With over 7,000 islands, it offers a unique blend of tradition, diversity, and
-                    modern innovation, making it a dynamic place to live, work, and grow.
+                    landscapes, and warm, hospitable people. With over 7,000 islands, it offers a unique blend of timeless tradition, rich
+                    biodiversity, and modern innovation, making it a dynamic place to live, work, and grow. For professionals and travelers
+                    alike, the country represents a rapidly evolving hub where natural wonders seamlessly coexist with booming urban
+                    environments and creative industries. <br><br>
+                    
+                    At the absolute heart of this narrative is Cebu Island, the country's oldest city and a powerhouse of economic and
+                    cultural activity. Often called the "Gateway to the Visayas," Cebu perfectly encapsulates the essence of the Philippines
+                    by balancing world-class diving spots and pristine white-sand beaches with a bustling, tech-driven metropolis. As a
+                    thriving center for IT, business process outsourcing, and creative design, it has become a magnet for digital nomads and
+                    global businesses—offering a unique lifestyle where you can close a business deal in a sleek skyscraper and be swimming
+                    with whale sharks or relaxing on a tropical beach just a couple of hours later.
                     
                     <!-- I am proud to be from the Philippines, a beautiful Southeast Asian nation known for its diverse culture, stunning
                     islands, and the warmth and resilience of its people. -->
                 </p>
             </div>
         </section>
-        <section class="card">
+        <section class="card resources">
             <h4 class="heading">Web Dev Resources</h4>
             <ul>
                 <li><a href="https://squoosh.app/">Squoosh</a></li>

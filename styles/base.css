@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --base-color: rgb(15, 32, 67); 
+    /* Hex: #0F2043 | Main navigation headers, footers, primary text, or buttons. */
+    --accent-color: rgb(0, 168, 107);
+    /* Hex: #00A86B | Call-to-action buttons, active links, or highlights to bring vibrancy. */
+    --main-text-color: rgb(34, 34, 34);
+    /* Hex: #222222 | Body text color on lighter backgrounds or borders for elements. */
+    --nav-text-color: rgb(255, 255, 255);
+    /* Hex: #fffff | Text color on darker background */
+    --secondary-color: rgb(44, 106, 182);
+    /* Hex: #2C6AB6 | Subheaders, secondary button variants, or hover states. */
+    --heading-hero-text: 'Montserrat', 'Inter', sans-serif;
+    --navigation-small-UI: 'Roboto', 'Inter', sans-serif;
+    --body-text-list: 'Inter', 'Open Sans'
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color:var(--base-color);
+    color: var(--nav-text-color);
+    font-family: var(--heading-hero-text);
+    letter-spacing: -0.01em;;
+    text-align: center;
+}
+
+/* Header Section CSS */
+header {
+    display: block;
+    height: auto;
+}
+
+header .course-title {
+    font-size: 2rem;
+    padding: 1rem 0;
+    font-weight: bolder;
+}
+
+header nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .75rem;
+}
+
+header nav a{
+    flex: 1;
+    text-align: center;
+    padding: .2rem auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: none;
+    color: var(--background-color);
+    font-weight: 600;
+    
+    border-bottom: 3px solid transparent;
+}
+
+header nav a:hover{
+    border-bottom-color: var(--accent-color);
+}
+
+
+/* Main Section CSS */
+main {
+    flex: 1;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    row-gap: .2rem;
+    column-gap: 1rem;
+    padding: 1rem 3rem;
+    font-family: var(--navigation-small-UI);
+    align-content: start;
+    color: var(--main-text-color);
+
+    position: relative;
+    z-index: 1; 
+}
+
+main::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+    /* Background image styling */
+    background-image:
+        linear-gradient(rgb(255, 255, 255, 0.4), rgb(235, 224, 208, 0.4)),
+        url(/images/bg.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    opacity: 1;
+}
+
+main h1 {
+    grid-column: 1/-1;
+    text-align: center;
+    padding: .8rem 0;
+}
+
+.about-me, .resources {
+    padding: .5rem 1.5rem;
+    border: 1px solid var(--main-text-color) ;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgb(34, 34, 34, 0.5);
+    background-color: var(--nav-text-color);
+
+    letter-spacing: 0.7px;
+}
+
+main section h4.heading {
+    text-align: center;
+    background-color: var(--base-color);
+    margin: -.5rem -1.5rem;
+    padding: .8rem;
+    color: var(--nav-text-color);
+}
+
+/* BLOCK 1: About Me */
+.about-me{
+    grid-column: span 3;   
+}
+
+/* --- Class: Introduction --- */
+.introduction {
+    padding: 1rem 0;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin: .5rem;
+}
+
+.introduction .content {
+    flex: 1;
+}
+
+.introduction img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid var(--main-text-color);
+    box-shadow: 0 4px 6px rgb(34, 34, 34, 0.3);
+}
+
+/* --- Class: Country  --- */
+.country {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+
+    padding-bottom: 1rem;
+}
+.country h3 {
+    flex: 1 0 100%;
+    text-align: center;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+
+    border-bottom: 2px solid var(--base-color);
+    display: table;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 6px;
+}
+
+.flag-container {
+    order: 1;
+    margin: 0;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.flag-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    font-style: italic;
+    letter-spacing: 0.5px;
+}
+
+.country .content {
+    flex: 1;
+    order: 2;
+}
+
+/* BLOCK 2: Resources */
+.resources {
+    grid-column: span 1;
+}
+
+.resources ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    gap: .4;
+}
+
+.resources li a {
+    display: inline-block;
+    color: var(--main-text-color);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 6px 0;
+
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+}
+
+.resources li a:hover {
+    color: var(--accent-color);
+    border-bottom-color: var(--accent-color);
+}
+
+/* Footer Section CSS */
+footer {
+    padding: 1rem 0;
+    flex-shrink: 0;
+}
