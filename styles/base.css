@@ -31,7 +31,7 @@ header, footer {
     background-color:var(--base-color);
     color: var(--nav-text-color);
     font-family: "Montserrat", sans-serif;
-    font-weight: 600;
+    font-weight: 500;
     letter-spacing: -0.01em;
     text-align: center;
 }
@@ -215,7 +215,7 @@ main section h2.heading {
     margin: 2rem 0 0;
     display: flex;
     flex-direction: column;
-    gap: 0.4px;
+    gap: 0.4rem;
 }
 
 .resources li a {
