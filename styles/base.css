@@ -15,9 +15,9 @@
     /* Hex: #fffff | Text color on darker background */
     --secondary-color: rgb(44, 106, 182);
     /* Hex: #2C6AB6 | Subheaders, secondary button variants, or hover states. */
-    --heading-hero-text: 'Montserrat', 'Inter', sans-serif;
-    --navigation-small-UI: 'Roboto', 'Inter', sans-serif;
-    --body-text-list: 'Inter', 'Open Sans'
+    --heading-hero-text: "Montserrat", sans-serif;
+    --navigation-small-UI: "Roboto", sans-serif;
+    --body-text-list: "Inter", sans-serif;
 }
 
 body {
@@ -31,7 +31,8 @@ header, footer {
     background-color:var(--base-color);
     color: var(--nav-text-color);
     font-family: var(--heading-hero-text);
-    letter-spacing: -0.01em;;
+    font-weight: 600;
+    letter-spacing: -0.01em;
     text-align: center;
 }
 
@@ -57,8 +58,8 @@ header nav {
 header nav a{
     flex: 1;
     text-align: center;
-    padding: .2rem auto;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: .2rem 0;
+    font-family: var(--navigation-small-UI);
     text-decoration: none;
     color: var(--background-color);
     font-weight: 600;
@@ -124,12 +125,15 @@ main h1 {
     letter-spacing: 0.7px;
 }
 
-main section h4.heading {
+main section h2.heading {
     text-align: center;
     background-color: var(--base-color);
     margin: -.5rem -1.5rem;
     padding: .8rem;
     color: var(--nav-text-color);
+
+    font-style: var(--heading-hero-text);
+    font-weight: 600;
 }
 
 /* BLOCK 1: About Me */
@@ -211,7 +215,7 @@ main section h4.heading {
     margin: 2rem 0 0;
     display: flex;
     flex-direction: column;
-    gap: .4;
+    gap: 0.4;
 }
 
 .resources li a {
