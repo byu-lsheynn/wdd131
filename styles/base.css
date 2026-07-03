@@ -15,9 +15,9 @@
     /* Hex: #fffff | Text color on darker background */
     --secondary-color: rgb(44, 106, 182);
     /* Hex: #2C6AB6 | Subheaders, secondary button variants, or hover states. */
-    --heading-hero-text: "Montserrat", sans-serif;
-    --navigation-small-UI: "Roboto", sans-serif;
-    --body-text-list: "Inter", sans-serif;
+    /*  --heading-hero-text: "Montserrat", sans-serif;
+        --navigation-small-UI: "Roboto", sans-serif;
+        --body-text-list: "Inter", sans-serif; */
 }
 
 body {
@@ -30,7 +30,7 @@ body {
 header, footer {
     background-color:var(--base-color);
     color: var(--nav-text-color);
-    font-family: var(--heading-hero-text);
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
     letter-spacing: -0.01em;
     text-align: center;
@@ -59,7 +59,7 @@ header nav a{
     flex: 1;
     text-align: center;
     padding: .2rem 0;
-    font-family: var(--navigation-small-UI);
+    font-family: "Roboto", sans-serif;
     text-decoration: none;
     color: var(--background-color);
     font-weight: 600;
@@ -81,7 +81,7 @@ main {
     row-gap: .2rem;
     column-gap: 1rem;
     padding: 1rem 3rem;
-    font-family: var(--navigation-small-UI);
+    font-family: "Inter", sans-serif;
     align-content: start;
     color: var(--main-text-color);
 
@@ -132,7 +132,7 @@ main section h2.heading {
     padding: .8rem;
     color: var(--nav-text-color);
 
-    font-style: var(--heading-hero-text);
+    font-style: "Montserrat", sans-serif;
     font-weight: 600;
 }
 
@@ -215,7 +215,7 @@ main section h2.heading {
     margin: 2rem 0 0;
     display: flex;
     flex-direction: column;
-    gap: 0.4;
+    gap: 0.4px;
 }
 
 .resources li a {
