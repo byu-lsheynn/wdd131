@@ -132,7 +132,7 @@ main section h2.heading {
     padding: .8rem;
     color: var(--nav-text-color);
 
-    font-style: "Montserrat", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-weight: 600;
 }
 
