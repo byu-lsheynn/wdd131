@@ -13,6 +13,8 @@ const options = {
     day: 'numeric',
     hour: 'numeric',
     minute: '2-digit',
-    hour12: true
+    second: '2-digit',
+    hour12: false
 };
+
 lastModifiedElement.textContent = date.toLocaleDateString('en-US', options);
