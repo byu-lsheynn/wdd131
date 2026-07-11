@@ -28,6 +28,7 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    color: var(--main-text-color);
 }
 
 header, footer {
@@ -53,7 +54,7 @@ header {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: .5rem 0;
+    padding: 0.5rem 0;
 }
 
 .navbar nav a {
@@ -68,28 +69,23 @@ header {
     padding-bottom: 0.05rem;
 }
 
-.navbar nav a:hover {
+.navbar nav a:hover, .navbar nav a:focus {
     border-bottom-color: var(--accent-color);
+    outline: none;
 }
 
 /* -- Hamburger Button -- */
 .hamburger-btn {
     display: none !important;
-    /* !important prevents other conflicting styles from overriding this */
     height: 32px;
     width: 40px;
     cursor: pointer;
     position: relative;
+    /* background: transparent;
+    border: none; */
 }
 
 /* Standard desktop navigation bar */
-.navbar nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: .5rem 0;
-}
-
 .hamburger-btn span,
 .hamburger-btn span::before,
 .hamburger-btn span::after {
@@ -99,7 +95,9 @@ header {
     position: absolute;
     width: 40px;
     height: 4px;
-    margin-top: 13px;
+    left: 0;
+    top: 50%;
+    margin-top: -2px;
 
     -webkit-transition: .3s ease-in-out;
     -moz-transition: .3s ease-in-out;
@@ -143,7 +141,7 @@ main {
     width: 100%;
     max-width: 800px;
     margin: 0 auto;
-    padding: 1rem 0;
+    padding: 1rem;
 }
 
 main h1 {
@@ -154,7 +152,6 @@ main h1 {
 
 .gallery-container {
     display: grid;
-    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
     grid-template-columns: 1fr;
 }
 
@@ -182,14 +179,15 @@ figure img{
 figcaption {
     padding: 0.3rem 0;
     font-size: .9rem;
-    color: var(--base-color);
+    color: var(--main-text-color);
     text-align: center;
 }
 
 /* -- FOOTER Section -- */
 footer {
     text-align: center;
-    padding: .5rem 0;
+    padding: 1rem 0;
+    line-height: 1.5;
 }
 
 

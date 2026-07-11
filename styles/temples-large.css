@@ -42,9 +42,9 @@
         top: 100%;
         left: 0;
         background-color: var(--secondary-color, rgb(44, 106, 182));
-        /* padding: 1rem 0; */
         box-shadow: 0 4px 6px rgb(15, 32, 67, 0.1);
         z-index: 100;
+        gap: 0.2rem;
     }
 
     .navbar nav a {
@@ -52,7 +52,7 @@
         width: 100%;
     }
 
-    .navbar nav a:hover {
+    .navbar nav a:hover, .navbar nav a:focus {
         background-color: var(--accent-color, rgb(0, 168, 107));
     }
 
