@@ -1,0 +1,195 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --base-color: rgb(15, 32, 67);
+    /* Hex: #0F2043 | Main navigation headers, footers, primary text, or buttons. */
+    --accent-color: rgb(0, 168, 107);
+    /* Hex: #00A86B | Call-to-action buttons, active links, or highlights to bring vibrancy. */
+    --main-text-color: rgb(34, 34, 34);
+    /* Hex: #222222 | Body text color on lighter backgrounds or borders for elements. */
+    --nav-text-color: rgb(255, 255, 255);
+    /* Hex: #fffff | Text color on darker background */
+    --secondary-color: rgb(44, 106, 182);
+    /* Hex: #2C6AB6 | Subheaders, secondary button variants, or hover states. */
+    
+    /* font-family: 
+        "Montenegrin Gothic One", serif;
+        "Playfair Display", serif; */
+}
+
+body {
+    font-family: "Playfair Display", serif;
+    letter-spacing: .02rem;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    background-color: var(--base-color);
+    color: var(--nav-text-color);
+}
+
+/* -- HEADER Section -- */
+header {
+    padding: 1rem;
+    font-family: "Montenegrin Gothic One", serif;
+    
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    box-shadow: 0 0 10px var(--secondary-color);
+}
+
+.page-title {
+    font-size: 2rem;
+}
+
+.navbar nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem 0;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: var(--nav-text-color);
+    font-size: 1.2em;
+    letter-spacing: 0.06em;
+    text-align: center;
+    flex: 1;
+
+    border-bottom: 3px solid transparent;
+    padding-bottom: 0.05rem;
+}
+
+.navbar nav a:hover {
+    border-bottom-color: var(--accent-color);
+}
+
+/* -- Hamburger Button -- */
+.hamburger-btn {
+    display: none !important;
+    /* !important prevents other conflicting styles from overriding this */
+    height: 32px;
+    width: 40px;
+    cursor: pointer;
+    position: relative;
+}
+
+/* Standard desktop navigation bar */
+.navbar nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: .5rem 0;
+}
+
+.hamburger-btn span,
+.hamburger-btn span::before,
+.hamburger-btn span::after {
+    background: var(--nav-text-color);
+    border-radius: 3px;
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 4px;
+    margin-top: 13px;
+
+    -webkit-transition: .3s ease-in-out;
+    -moz-transition: .3s ease-in-out;
+    -o-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+}
+
+.hamburger-btn span::before {
+    margin-top: -12px;
+}
+
+.hamburger-btn span::after {
+    margin-top: 12px;
+}
+
+.hamburger-btn.active span {
+    background: transparent;
+}
+
+.hamburger-btn.active span::before {
+    margin-top: 0;
+
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.hamburger-btn.active span::after {
+    margin-top: 0;
+
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg);
+}
+
+/* -- MAIN Section -- */
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem 0;
+}
+
+main h1 {
+    text-align: center;
+    padding: .5rem 0;
+    font-family: "Montenegrin Gothic One", serif;
+}
+
+.gallery-container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+    grid-template-columns: 1fr;
+}
+
+figure {
+    margin: 0 0 1rem 0;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+figure:last-child {
+    margin-bottom: 0;
+}
+
+figure img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+
+    box-shadow: 0 0 6px var(--secondary-color);
+    border: 1px solid var(--nav-text-color);
+    border-radius: 3px;
+}
+
+figcaption {
+    padding: 0.3rem 0;
+    font-size: .9rem;
+    color: var(--base-color);
+    text-align: center;
+}
+
+/* -- FOOTER Section -- */
+footer {
+    text-align: center;
+    padding: .5rem 0;
+}
+
+
+

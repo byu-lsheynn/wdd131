@@ -9,71 +9,86 @@
     <meta name="author" content="Lady Sheynn Vengco">
 
     <!-- External Source -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montenegrin+Gothic+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="styles/temples.css">
     <link rel="stylesheet" href="styles/temples-large.css">
     <script src="scripts/temples.js" defer></script>
 </head>
 <body>
     <header>
-        <div>Temple Album</div>
-        <div>
-            <nav>
-                <a href="#">HOME</a>
-                <a href="">OLD</a>
-                <a href="">NEW</a>
-                <a href="">LARGE</a>
-                <a href="">SMALL</a>
+        <div class="page-title">Temple Album</div>
+        <div class="navbar">
+
+            <!-- Hamburger / Close Toggle Button -->
+            <div class="hamburger-btn" onclick="menuBtnFunction(this)">
+                <span></span>
+            </div>
+
+            <!-- Navigation Links -->
+            <nav class="menu" id="menu-nav">
+                <a href="#home" class="active">Home</a>
+                <a href="#old">Old</a>
+                <a href="#new">New</a>
+                <a href="#large">Large</a>
+                <a href="#small">Small</a>
             </nav>
         </div>
     </header>
 
     <main>
         <h1>Home</h1>
-        <!-- Temple 1 -->
-        <figure>
-            <img src="" alt="">
-            <figcaption></figcaption>
-        </figure>
-        <!-- Temple 2 -->
-        <figure>
-            <img src="" alt="">
-            <figcaption></figcaption>
-        </figure>
-        <!-- Temple 3 -->
-        <figure>
-            <img src="" alt="">
-            <figcaption></figcaption>
-        </figure>
-        <!-- Temple 4 -->
-        <figure>
-            <img src="" alt="">
-            <figcaption></figcaption>
-        </figure>
-        <!-- Temple 5 -->
-        <figure>
-            <img src="" alt="">
-            <figcaption></figcaption>
-        </figure>
-        <!-- Temple 6 -->
-        <figure>
-            <img src="" alt="">
-            <figcaption></figcaption>
-        </figure>
-        <!-- Temple 7 -->
-        <figure>
-            <img src="" alt="">
-            <figcaption></figcaption>
-        </figure>
-        <!-- Temple 8 -->
-        <figure>
-            <img src="" alt="">
-            <figcaption></figcaption>
-        </figure>
-        <!-- Temple 9 -->
-        <figure>
-            <img src="" alt="">
-            <figcaption></figcaption>
-        </figure>
+        <div class="gallery-container">
+            <!-- Temple 1 -->
+            <figure>
+                <img src="images/manila-philippines-temple.jpg" alt="Manila Philippines Temple" width="200">
+                <figcaption>Manila Philippines Temple</figcaption>
+            </figure>
+            <!-- Temple 2 -->
+            <figure>
+                <img src="images/cebu-city-philippines-temple.jpg" alt="Cebu City Philippines Temple">
+                <figcaption>Cebu City Philippines Temple</figcaption>
+            </figure>
+            <!-- Temple 3 -->
+            <figure>
+                <img src="images/urdaneta-philippines-temple.jpg" alt="Urdaneta Philippines Temple">
+                <figcaption>Urdaneta Philippines Temple</figcaption>
+            </figure>
+            <!-- Temple 4 -->
+            <figure>
+                <img src="images/alabang-philippines-temple.jpg" alt="Alabang Philippines Temple">
+                <figcaption>Alabang Philippines Temple</figcaption>
+            </figure>
+            <!-- Temple 5 -->
+            <figure>
+                <img src="images/davao-philippines-temple.jpg" alt="Davao Philippines Temple">
+                <figcaption>Davao Philippiens Temple</figcaption>
+            </figure>
+            <!-- Temple 6 -->
+            <figure>
+                <img src="images/bacolod-philippines-temple.jpg" alt="Bacolod Philippines Temple">
+                <figcaption>Bacolod Philippiens Temple</figcaption>
+            </figure>
+            <!-- Temple 7 -->
+            <figure>
+                <img src="images/cagayan-de-oro-philippines-temple.jpg" alt="Cagayan de Oro Philippines Temple">
+                <figcaption>Cagayan de Oro Philippines Temple</figcaption>
+            </figure>
+            <!-- Temple 8 -->
+            <figure>
+                <img src="images/tacloban-city-philippines-temple.jpg" alt="Tacloban City Philippines Temple">
+                <figcaption>Tacloban City Philippines Temple</figcaption>
+            </figure>
+            <!-- Temple 9 -->
+            <figure>
+                <img src="images/naga-philippines-temple.jpg" alt="Naga Philippines Temple">
+                <figcaption>Naga Philippines Temple</figcaption>
+            </figure>
+        </div>
     </main>
     
     <footer>

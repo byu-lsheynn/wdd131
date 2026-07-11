@@ -1,3 +1,12 @@
+// -- HAMBURGER Menu script -- //
+function menuBtnFunction(hamburgerBtn) {
+    hamburgerBtn.classList.toggle("active");
+
+    const menuNav = document.getElementById("menu-nav");
+    menuNav.classList.toggle("open")
+}
+
+// -- FOOTER script -- //
 // currentyear 
 const currentYearElement = document.getElementById("currentyear");
 currentYearElement.textContent = new Date().getFullYear();
