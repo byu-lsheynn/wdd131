@@ -60,7 +60,7 @@ header {
 .navbar nav a {
     text-decoration: none;
     color: var(--nav-text-color);
-    font-size: 1.2em;
+    font-size: 1.3em;
     letter-spacing: 0.06em;
     text-align: center;
     flex: 1;
@@ -71,6 +71,7 @@ header {
 
 .navbar nav a:hover, .navbar nav a:focus {
     border-bottom-color: var(--accent-color);
+    border-radius: 3px;
     outline: none;
 }
 
@@ -142,6 +143,8 @@ main {
     max-width: 800px;
     margin: 0 auto;
     padding: 1rem;
+
+    background: linear-gradient(rgb(255, 255, 255, 0.4), rgb(235, 224, 208, 0.4));
 }
 
 main h1 {

@@ -23,7 +23,7 @@
     }
 
     .page-title {
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
 
     /* Show the hamburger button on narrow screens */
@@ -41,7 +41,7 @@
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: var(--secondary-color, rgb(44, 106, 182));
+        background-color: var(--base-color, rgb(15, 32, 67));
         box-shadow: 0 4px 6px rgb(15, 32, 67, 0.1);
         z-index: 100;
         gap: 0.2rem;
@@ -54,6 +54,8 @@
 
     .navbar nav a:hover, .navbar nav a:focus {
         background-color: var(--accent-color, rgb(0, 168, 107));
+        color: var(--nav-text-color, rgb(255, 255, 255));
+        font-weight: 600;
     }
 
     /* Show the menu when JS toggles the 'open' class */
