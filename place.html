@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W03 Assignment: Country Page</title>
+    <meta name="description" content="A custom-built webpage showcasing a featured country or travel destination,
+        designed to meet specific structural and developmental guidelines.t">
+    <meta name="author" content="Lady Sheynn Vengco">
+
+    <!-- External Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bodoni+Moda+SC:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Montserrat:ital@0;1&family=Roboto+Slab:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/place.css">
+    <script src="scripts/place.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="title">
+            <h1>The Philippines</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="hero">
+            <picture>
+                <source media="(min-width: 1000px)" srcset="images/place-hero-large.webp">
+                <source media="(min-width: 600px)" srcset="images/place-hero-medium.webp">
+                <img src="images/place-hero-small.webp" alt="Swim with the Whale Sharks in Oslob, Cebu" width="400" height="600">
+            </picture>
+        </div>
+        <section class="card data">
+            <h2>DATA</h2>
+            <dl>
+                <dt>Area:</dt>
+                <dd>300,000 sq km</dd>
+
+                <dt>Population:</dt>
+                <dd>Approximately 117 million</dd>
+
+                <dt>Capital:</dt>
+                <dd>Manila</dd>
+
+                <dt>Languages:</dt>
+                <dd>Filipino and English (official langauges)</dd>
+
+                <dt>Currency:</dt>
+                <dd>Philippines peso (PHP) (symbol: ₱)</dd>
+
+                <dt>Time Zone:</dt>
+                <dd>Philippine Time (PHT) — UTC+8</dd>
+                
+                <dt>Calling Code:</dt>
+                <dd>+63</dd>
+
+                <dt>Internet TLD:</dt>
+                <dd>.ph</dd>
+            </dl>
+        </section>
+
+        <section class="card weather">
+            <h2>WEATHER</h2>
+            <img src="images/weather-svg.svg" alt="weather icon">
+
+            <dl>
+                <dt>Temperature:</dt>
+                <dd><span id="temperature">31</span> °C</dd>
+
+                <dt>Conditions:</dt>
+                <dd>Mostly Sunny</dd>
+
+                <dt>Wind:</dt>
+                <dd><span id="wind-speed">5</span> km/h</dd>
+
+                <dt>Wind Chill:</dt>
+                <dd><span id="wind-chill"></span></dd>
+            </dl>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Lady Sheynn Vengco | Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+</html>

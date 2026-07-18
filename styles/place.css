@@ -1,0 +1,159 @@
+:root {
+    --base-color: #050950;
+    /* Hex: #0F2043 | Main navigation headers, footers, primary text, or buttons. */
+    --accent-color: #9e0505;
+    /* Hex: #00A86B | Call-to-action buttons, active links, or highlights to bring vibrancy. */
+    --main-text-color: #222222;
+    /* Hex: #222222 | Body text color on lighter backgrounds or borders for elements. */
+    --nav-text-color: #eeeded;
+    /* Hex: #fffff | Text color on darker background */
+    --secondary-color: #f0de36;
+    /* Hex: #2C6AB6 | Subheaders, secondary button variants, or hover states. */
+    /*  
+        --heading-hero-text: "Bodoni Moda SC", serif;
+        --navigation-small-UI: "Roboto Slab", serif;
+        --body-text-list: "Montserrat", sans-serif;
+    */
+
+    /* Extras */
+    --shadow: 2px 6px 15px rgba(0,0,0,.15);
+    --border-radius: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Montserrat", sans-serif;
+    color: var(--main-text-color);
+}
+
+/* -- HEADER Section CSS  -- */
+.title {
+    padding: 0.8rem;
+    background-color: var(--base-color);
+    font-family: "Bodoni Moda SC", serif;
+    font-weight: 900;
+    font-size: 1.2rem;
+    color: var(--nav-text-color);
+
+    text-align: center;
+    letter-spacing: 0.05rem;
+    border-bottom: solid 8px var(--secondary-color);
+}
+
+/* -- MAIN Section CSS -- */
+.hero {
+    position: relative;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+}
+
+.card {
+    background-color: var(--nav-text-color);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+
+    align-items: center;
+}
+
+.card h2 {
+    text-align: center;
+    font-family: "Roboto Slab", serif;
+    color: var(--nav-text-color);
+    font-weight: 800;
+
+    background-color: var(--accent-color);
+    padding: .5rem;
+}
+
+/* -- DATA LIST section css -- */
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: .5rem;
+
+    padding: .3rem 2rem;
+}
+
+dt {
+    text-align: right;
+    font-weight: bold;
+}
+
+dd {
+    margin-left: .25rem;
+    text-align: left;
+}
+
+/* -- FOOTER Section CSS -- */
+footer {
+    background-color: var(--base-color);
+    color: var(--nav-text-color);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    text-align: center;
+
+    padding: 1rem 0;
+    flex-shrink: 0;
+}
+
+/* -- MOBILE Layout CSS */
+@media (max-width:767px) {
+
+    .hero {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card {
+        margin: 2rem 1rem;
+    }
+
+    .weather img {
+        width: 90px;
+        margin: 1rem auto;
+    }
+}
+
+/* -- DESKTOP Layout CSS */
+@media (min-width:768px) {
+
+    .hero {
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    .hero picture {
+        grid-column: 1;
+        grid-row: 1;
+    }
+
+    .data {
+        position: absolute;
+        top: 10rem;
+        left: 5rem;
+        width: 400px;
+    }
+
+    .weather {
+        position: absolute;
+        bottom: 1rem;
+        right: 5rem;
+        width: 350px;
+    }
+
+    .weather img {
+        width: 80px;
+        margin: 1rem auto;
+    }
+    
+}
