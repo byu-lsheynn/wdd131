@@ -1,13 +1,13 @@
 :root {
-    --base-color: #050950;
+    --base-color: rgb(5, 9, 80);
     /* Hex: #0F2043 | Main navigation headers, footers, primary text, or buttons. */
-    --accent-color: #9e0505;
+    --accent-color: rgb(158, 5, 5);
     /* Hex: #00A86B | Call-to-action buttons, active links, or highlights to bring vibrancy. */
-    --main-text-color: #222222;
+    --main-text-color: rgb(34, 34, 34);
     /* Hex: #222222 | Body text color on lighter backgrounds or borders for elements. */
-    --nav-text-color: #eeeded;
+    --nav-text-color: rgb(238, 237, 237);
     /* Hex: #fffff | Text color on darker background */
-    --secondary-color: #f0de36;
+    --secondary-color: rgb(240, 222, 54);
     /* Hex: #2C6AB6 | Subheaders, secondary button variants, or hover states. */
     /*  
         --heading-hero-text: "Bodoni Moda SC", serif;
@@ -58,11 +58,9 @@ body {
 
 .card {
     background-color: var(--nav-text-color);
-    padding: 1.5rem;
+    padding: 1rem .75rem .5rem;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
-
-    align-items: center;
 }
 
 .card h2 {
@@ -75,11 +73,18 @@ body {
     padding: .5rem;
 }
 
+
+.weather img {
+    display: flex;
+    width: 80px;
+    margin: 0 auto;
+}
+
 /* -- DATA LIST section css -- */
 dl {
     display: grid;
     grid-template-columns: auto 1fr;
-    gap: .5rem;
+    gap: .35rem;
 
     padding: .3rem 2rem;
 }
@@ -107,7 +112,7 @@ footer {
 }
 
 /* -- MOBILE Layout CSS */
-@media (max-width:767px) {
+@media (max-width:800px) {
 
     .hero {
         display: flex;
@@ -117,15 +122,10 @@ footer {
     .card {
         margin: 2rem 1rem;
     }
-
-    .weather img {
-        width: 90px;
-        margin: 1rem auto;
-    }
 }
 
 /* -- DESKTOP Layout CSS */
-@media (min-width:768px) {
+@media (min-width:1600px) {
 
     .hero {
         display: grid;
@@ -137,23 +137,42 @@ footer {
         grid-row: 1;
     }
 
+    .card {
+        background-color: rgb(238, 237, 237, 0.75);
+        box-shadow: 2px 6px 15px rgba(0, 0, 0, .2);
+        backdrop-filter: blur(5px);
+
+        padding: 2rem 1.5rem 1.5rem;
+        position: relative;
+    }
+
+    .card h2{
+        position: relative;
+        left: -30px;
+        width: calc(100% - 30px);
+        margin: -1rem 0 1.5rem;
+        padding: 1rem;
+    }
+
     .data {
         position: absolute;
-        top: 10rem;
-        left: 5rem;
+        top: 15vh;
+        left: 5vw;
         width: 400px;
     }
 
     .weather {
         position: absolute;
-        bottom: 1rem;
-        right: 5rem;
+        bottom: 3vh;
+        right: 5vw;
         width: 350px;
     }
 
     .weather img {
-        width: 80px;
-        margin: 1rem auto;
+        display: none;
     }
-    
+
+    .weather h2::after {
+        content: " ⛅";
+    }
 }
