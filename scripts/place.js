@@ -20,14 +20,9 @@ const options = {
 lastModifiedElement.textContent = date.toLocaleDateString('en-US', options);
 
 
-// calculateWindChill
-function calculateWindChill(temperature, windSpeed) {
-    return (
-        13.12 +
-        (0.6215 * temperature) -
-        (11.37 * Math.pow(windSpeed, 0.16)) +
-        (0.3965 * temperature * Math.pow(windSpeed, 0.16))
-    ).toFixed(1);
+// calculateWindChill FUNCTION (one line)
+function calculateWindChill(temp, speed) {
+    return (13.12 + (0.6215 * temp) - (11.37 * Math.pow(speed, 0.16)) + (0.3965 * temp * Math.pow(speed, 0.16))).toFixed(1);
 }
 
 // Static values
