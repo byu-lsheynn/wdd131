@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>W04 Assignment: Filtered Temple Album</title>
+    <meta name="description"
+        content="A dynamic and responsive web application displaying filtered temple cards using JavaScript objects and arrays.">
+    <meta name="author" content="Lady Sheynn Vengco">
+
+    <!-- External Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montenegrin+Gothic+One&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+        rel="stylesheet">
+
+    <!-- Updated CSS File Links -->
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <link rel="stylesheet" href="styles/filtered-temples-large.css">
+
+    <!-- Updated JS File Link -->
+    <script src="scripts/filtered-temples.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="page-title">Temple Album</div>
+        <div class="navbar">
+
+            <!-- Hamburger / Close Toggle Button -->
+            <button class="hamburger-btn" id="hamburger-btn" aria-label="Toggle Navigation Menu">
+                <span></span>
+            </button>
+
+            <!-- Navigation Links -->
+            <nav id="menu-nav">
+                <a href="#" id="home" class="active">Home</a>
+                <a href="#" id="old">Old</a>
+                <a href="#" id="new">New</a>
+                <a href="#" id="large">Large</a>
+                <a href="#" id="small">Small</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <h1 id="category-title">Home</h1>
+        <!-- Dynamic Temple Cards Container -->
+        <div class="gallery-container" id="temple-cards"></div>
+    </main>
+
+    <footer>
+        <p>&copy;<span id="currentyear"></span> | Lady Sheynn Vengco | Philippines</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

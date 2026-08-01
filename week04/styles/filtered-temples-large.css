@@ -1,0 +1,51 @@
+/* -- styles/filtered-temples-large.css -- */
+
+@media screen and (min-width: 690px) {
+    .gallery-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+
+    .page-title {
+        font-size: 1.8rem;
+    }
+
+    .hamburger-btn {
+        display: block !important;
+        margin-left: auto;
+    }
+
+    .navbar nav {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: var(--base-color, rgb(15, 32, 67));
+        box-shadow: 0 4px 6px rgba(15, 32, 67, 0.1);
+        z-index: 100;
+        gap: 0.2rem;
+    }
+
+    .navbar nav a {
+        padding: 0.75rem 0;
+        width: 100%;
+    }
+
+    .navbar nav a:hover,
+    .navbar nav a:focus {
+        background-color: var(--accent-color, rgb(0, 168, 107));
+        color: var(--nav-text-color, rgb(255, 255, 255));
+        font-weight: 600;
+    }
+
+    .navbar nav.open {
+        display: flex;
+    }
+}
