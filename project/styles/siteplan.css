@@ -1,0 +1,102 @@
+:root {
+    --primary: #006D77;
+    --secondary: #2A9D8F;
+    --accent: #E76F51;
+    --background: #F4EBD0;
+    --white: #ffffff;
+    --text: #333333;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Open Sans", sans-serif;
+    background: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.logo {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Poppins", sans-serif;
+}
+
+main {
+    width: min(1000px, 90%);
+    margin: auto;
+    padding: 2rem 0;
+}
+
+section {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    border-radius: 10px;
+}
+
+section h2 {
+    color: var(--secondary);
+    margin-bottom: 1rem;
+}
+
+.colors {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+}
+
+.color-card {
+    border-radius: 8px;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+
+.blue {
+    background: #006D77;
+}
+
+.green {
+    background: #2A9D8F;
+}
+
+.orange {
+    background: #E76F51;
+}
+
+.beige {
+    background: #F4EBD0;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+pre {
+    background: #efefef;
+    padding: 1rem;
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+footer {
+    background: var(--primary);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
