@@ -87,11 +87,36 @@ section h2 {
     border: 1px solid #ccc;
 }
 
-pre {
-    background: #efefef;
+/* Wireframes */
+.mobile-view,
+.desktop-view {
+    display: inline-block;
+    width: 100%;
+    max-width: 280px;
+    margin: 1rem;
     padding: 1rem;
-    overflow-x: auto;
-    margin-top: 1rem;
+    background-color: var(--white);
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    vertical-align: top;
+}
+
+.mobile-view img,
+.desktop-view img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.mobile-view figcaption,
+.desktop-view figcaption {
+    margin-top: 0.75rem;
+    font-weight: 600;
+    color: var(--primary);
 }
 
 footer {
