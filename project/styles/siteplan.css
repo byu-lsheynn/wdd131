@@ -5,6 +5,11 @@
     --background: #F4EBD0;
     --white: #ffffff;
     --text: #333333;
+
+    /* -- Google Fonts -- */
+    --main-font: "Montserrat", sans-serif;
+    --secondary-font: "Oswald", sans-serif;
+    --accent-font: "Roboto Slab", serif;
 }
 
 * {
@@ -14,7 +19,7 @@
 }
 
 body {
-    font-family: "Open Sans", sans-serif;
+    font-family: var(--main-font);
     background: var(--background);
     color: var(--text);
     line-height: 1.6;
@@ -22,7 +27,7 @@ body {
 
 header {
     background: var(--primary);
-    color: white;
+    color: var(--white);
     text-align: center;
     padding: 2rem;
 }
@@ -35,7 +40,7 @@ header {
 h1,
 h2,
 h3 {
-    font-family: "Poppins", sans-serif;
+    font-family: var(--accent-font)
 }
 
 main {
@@ -45,14 +50,14 @@ main {
 }
 
 section {
-    background: white;
+    background: var(--white);
     margin-bottom: 2rem;
     padding: 1.5rem;
     border-radius: 10px;
 }
 
 section h2 {
-    color: var(--secondary);
+    color: var(--accent-font);
     margin-bottom: 1rem;
 }
 
@@ -66,25 +71,41 @@ section h2 {
     border-radius: 8px;
     text-align: center;
     padding: 1rem;
-    color: white;
+    color: var(--white);
 }
 
 .blue {
-    background: #006D77;
+    background: var(--primary);
 }
 
 .green {
-    background: #2A9D8F;
+    background: var(--secondary);
 }
 
 .orange {
-    background: #E76F51;
+    background: var(--accent);
 }
 
 .beige {
-    background: #F4EBD0;
-    color: #333;
+    background: var(--background);
+    color: var(--text);
     border: 1px solid #ccc;
+}
+
+.menu-text {
+    font-family: var(--secondary-font);
+}
+
+.heading-text {
+    font-family: var(--accent-font);
+}
+
+.body-text {
+    font-family: var(--main-font);
+}
+
+ul {
+    list-style-type: none;
 }
 
 /* Wireframes */
@@ -121,7 +142,7 @@ section h2 {
 
 footer {
     background: var(--primary);
-    color: white;
+    color: var(--white);
     text-align: center;
     padding: 1rem;
 }
